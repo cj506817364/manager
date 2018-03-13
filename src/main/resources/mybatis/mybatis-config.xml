@@ -16,12 +16,9 @@
         <!-- 打印sql语句 -->
         <setting name="logImpl" value="STDOUT_LOGGING" />
     </settings>
-    <typeAliases>
-        <typeAlias type="top.duckduck.module.order.entity.Order"/>
-    </typeAliases>
     <!-- 类型处理器 -->
     <typeHandlers>
-        <package name="top.duckduck.common.typehandler" />
+        <package name="com.ppj.backend.manager.common.typehandler" />
     </typeHandlers>
     
     <plugins>

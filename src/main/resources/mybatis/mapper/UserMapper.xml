@@ -2,12 +2,12 @@
 <!DOCTYPE mapper
 		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="top.duckduck.module.member.dao.MemberDao">
+<mapper namespace="com.ppj.backend.manager.module.dao.UserDao">
 
-	<select id="findAll" resultType="top.duckduck.module.member.entity.Member">
+	<select id="findAll" resultType="com.ppj.backend.manager.module.dto.UserDto">
 		select
 		*
-		from dd_member
+		from user_tb
 	</select>
 
 
@@ -27,7 +27,7 @@
 	<select id="getById" resultMap="BaseResultMap" parameterType="Long" >
 		select
 		<include refid="Base_Column_List"/>
-		from dd_member
+		from user_tb
 		<where>
 			id = #{id}
 		</where>

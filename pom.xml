@@ -26,10 +26,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- JDK版本 -->
 		<java.version>1.8</java.version>
+		<pagehelper.version>4.1.4</pagehelper.version>
 		<hibernate-jpa-2.1-api.version>1.0.0.Final</hibernate-jpa-2.1-api.version>
 		<mybatis.version>3.4.0</mybatis.version>
 		<mybatis-spring.version>1.3.0</mybatis-spring.version>
 		<mybatis-spring-boot-autoconfigure.version>1.1.1</mybatis-spring-boot-autoconfigure.version>
+		<jsqlparser.version>0.9.1</jsqlparser.version>
 		<mybatis-typehandlers-jsr310.version>1.0.2</mybatis-typehandlers-jsr310.version>
 		<druid.version>1.0.18</druid.version>
 	</properties>
@@ -87,6 +89,16 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>${pagehelper.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.jsqlparser</groupId>
+			<artifactId>jsqlparser</artifactId>
+			<version>${jsqlparser.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    name: manager
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.94.133.120:3306/manager
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: mybatis/mapper/*.xml #用于扫描mapper
+  config-location: classpath:mybatis/mybatis-config.xml #用于加载mybatis-config.xml 别名配置请到mybatis-config.xml中配置

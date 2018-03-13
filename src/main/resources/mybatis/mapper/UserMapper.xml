@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.duckduck.module.member.dao.MemberDao">
+
+	<select id="findAll" resultType="top.duckduck.module.member.entity.Member">
+		select
+		*
+		from dd_member
+	</select>
+
+
+	<resultMap id="BaseResultMap" type="Member" >
+		<id column="id" property="id"/>
+		<id column="name" property="name"/>
+		<id column="age" property="age"/>
+		<id column="createTime" property="createTime"/>
+		<id column="lastPpdateTime" property="lastUpdateTime"/>
+		<id column="dataStatus" property="dataStatus"/>
+	</resultMap>
+
+	<sql id="Base_Column_List" >
+		id,name,age,createTime,lastUpdateTime,dataStatus
+	</sql>
+
+	<select id="getById" resultMap="BaseResultMap" parameterType="Long" >
+		select
+		<include refid="Base_Column_List"/>
+		from dd_member
+		<where>
+			id = #{id}
+		</where>
+	</select>
+</mapper>

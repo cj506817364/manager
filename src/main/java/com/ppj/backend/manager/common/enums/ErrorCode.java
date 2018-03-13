@@ -1,7 +1,7 @@
 package com.ppj.backend.manager.common.enums;
 
-import top.duckduck.common.base.entity.DescriptionId;
-import top.duckduck.common.utils.EnumUtil;
+import com.ppj.backend.manager.common.base.entity.DescriptionId;
+import com.ppj.backend.manager.common.utils.EnumUtil;
 
 public enum ErrorCode implements DescriptionId {
     
